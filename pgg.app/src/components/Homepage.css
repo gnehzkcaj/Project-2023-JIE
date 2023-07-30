@@ -1,0 +1,21 @@
+html {
+    background-color: #f0ffff;
+    color: #2f4f4f;
+    border: thick solid white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 200%;
+    color:chocolate;
+    text-align: center;
+}
+
+.homepagelink {
+    text-align: center;
+    font-size: 150%;
+}
