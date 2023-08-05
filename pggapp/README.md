@@ -64,6 +64,7 @@ Feel free to explore the different features implemented in the application, such
 - **Multiple Routes:** Configured with multiple routes, each associated with a unique URL, allowing users to access specific content through URLs directly.
 - **Nested Routes:** Implements nested routes to create a hierarchical structure for components, offering flexibility and organization in building complex UI layouts.
 - **Route Parameters:** Demonstrates how to use route parameters to handle dynamic content, enabling components to display data based on URL parameters.
+- **404 Page:** Implements a custom 404 page for handling undefined routes, providing users with a user-friendly error page when navigating to non-existent routes.
 
 ## License
 
