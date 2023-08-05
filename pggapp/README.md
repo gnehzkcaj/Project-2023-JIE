@@ -15,7 +15,7 @@
 - Your app must make use of an API - either a public API or one you build yourself
 - A list of some more APIs for inspiration: https://github.com/public-apis/public-apis
 
-### My solution
+### My Solution
 - A mimic website of 
 
 ## Table of Contents
