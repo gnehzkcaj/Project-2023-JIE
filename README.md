@@ -68,11 +68,11 @@ This project is licensed under the [Mozilla Public License 2.0](LICENSE.txt). Yo
 
 ## Contact
 
-Provide your contact information, such as email or social media profiles, in case others want to get in touch with you regarding the project.
+
 
 ## Youtube Demo:
 
-Provide your contact information, such as email or social media profiles, in case others want to get in touch with you regarding the project.
+
 
 ---
 

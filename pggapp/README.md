@@ -29,7 +29,7 @@
 
 ## Development Journal
 
-A log
+-week 01
 <img width="2002" alt="General Assembly React Course Final Project-Website Wireframe" src="https://github.com/gnehzkcaj/Project-2023-JIE/assets/97222543/019fd947-e99e-4015-b44e-aee5fa5b1ba1">
 
 add a pagination component
@@ -42,15 +42,8 @@ To run the project locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/gnehzkcaj/Project-2023-JIE.git
 2. Navigate to the project directory: `cd pggapp`
-3.
-```
-npm install react-router-dom
-npm i @mui/material @emotion/react @emotion/styled
-
-
-```
-4. Install dependencies: `npm install`
-5. Start the development server: `npm start`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start`
 
 ## Usage
 
@@ -72,11 +65,10 @@ This project is licensed under the [Mozilla Public License 2.0](LICENSE.txt). Yo
 
 ## Contact
 
-Provide your contact information, such as email or social media profiles, in case others want to get in touch with you regarding the project.
+
 
 ## Youtube Demo:
 
-Provide your contact information, such as email or social media profiles, in case others want to get in touch with you regarding the project.
 
 ---
 

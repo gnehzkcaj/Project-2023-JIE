@@ -12,7 +12,7 @@ function App() {
         <Route path="/Detail" element={<>        
           <Detail />
         </>} />
-        <Route path="*" element={<h1>Uh oh, that page doesn't exist.</h1>} />
+        <Route path="*" element={<h1>Uh oh, 404 Page not exist.</h1>} />
       </Routes>
     </div>
   );
