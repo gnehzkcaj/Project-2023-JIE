@@ -2,7 +2,7 @@
 import Container from '@mui/material/Container';
 import { Typography } from '@mui/material';
 import { Box } from '@mui/system';
-import ImageCollage from '../components/ImageCollage';
+import ImageCollege from '../components/ImageCollege';
 
 import AboutThisApp from '../components/About';
 import Slides from '../components/Slides';
@@ -60,7 +60,7 @@ export default function Homepage() {
           height="600"
           style={{ marginRight: '50px' }}
         />
-        <ImageCollage />
+        <ImageCollege />
       </Box>
       <Box>
         <Typography variant="h6" component="h4" marginTop={5}>
