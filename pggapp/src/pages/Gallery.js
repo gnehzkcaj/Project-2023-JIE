@@ -3,13 +3,14 @@ import { useState, useEffect } from 'react';
 import PokemonList from './PokemonList';
 import NumberGenerator from '../components/Numbergenerator';
 import Button from '@mui/material/Button';
+import { Container } from '@mui/material';
 
 export default function Gallery() {
   const [loading, setLoading] = useState(false);
   const [pokemon, setPokemon] = useState([]);
 
   const [numbers, setNumbers] = useState([]);
-  const [isButtonClicked, setIsButtonClicked] = useState(false); 
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
 
   const handleGenerateNumbers = (count) => {
     const surpriseNumbers = NumberGenerator(count);
@@ -41,22 +42,22 @@ export default function Gallery() {
     const fetchSurprisedData = async () => {
       try {
         setPokemon([]);
-  
+
         const promises = numbers.map(async (num) => {
           const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${num}`);
           const data = await response.json();
           return { name: data.name, id: num };
         });
-  
+
         const newPokemonData = await Promise.all(promises);
-        setPokemon((prevPokemon) => [...prevPokemon, ...newPokemonData]);
+        setPokemon((pokemon) => [...pokemon, ...newPokemonData]);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching data:', error);
         setLoading(false);
       }
     };
-  
+
     if (isButtonClicked) {
       fetchSurprisedData();
     }
@@ -64,12 +65,19 @@ export default function Gallery() {
 
   if (loading) return "Loading...";
 
+  const handleRefresh = () => {
+    window.location.reload();
+  };
+
   return (
-    <div>
+    <Container>
       <h1>Gallery</h1>
       <NumberGenerator count={12} />
-      <Button variant="contained" onClick={() => handleGenerateNumbers(12)}>Surprise Me !</Button>
+      <Button variant="contained" sx={{ marginRight: 6 }} onClick={() => handleGenerateNumbers(12)}>Surprise Me !</Button>
+      <Button variant="contained" onClick={handleRefresh}>
+        Fetch All
+      </Button>
       <PokemonList pokemon={pokemon} />
-    </div>
+    </Container>
   );
 }
