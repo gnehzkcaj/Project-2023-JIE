@@ -16,7 +16,7 @@
 - A list of some more APIs for inspiration: https://github.com/public-apis/public-apis
 
 ### My Solution
-- A mimic website of 
+- A mimic website of www.pokemon.com using [pokeapi](pokeapi.co)
 
 ## Table of Contents
 

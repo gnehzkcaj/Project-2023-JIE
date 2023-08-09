@@ -1,21 +1,25 @@
 import { Routes, Route } from 'react-router-dom';
-import Library from './components/Library';
-import HomePage from './components/Homepage';
-import Detail from './components/Detail';
+import Homepage from './pages/Homepage';
+import PokemonDetail from './pages/PokemonDetail';
+import Gallery from './pages/Gallery';
+import './App.css';
+
+import Footer from './components/Footer';
 
 function App() {
+
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/library" element={<Library />} />
-        <Route path="/Detail" element={<>        
-          <Detail />
+        <Route path="/" element={<Homepage />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/pokemon/:id" element={<>
+          <PokemonDetail />
         </>} />
-        <Route path="*" element={<h1>Uh oh, 404 Page not exist.</h1>} />
+        <Route path="*" element={<h1>4-oh!-4, that page doesn't exist.</h1>} />
       </Routes>
+      <Footer />
     </div>
   );
 }
-
 export default App;
