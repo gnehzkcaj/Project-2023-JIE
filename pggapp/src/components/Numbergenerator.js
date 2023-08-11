@@ -3,7 +3,7 @@ export default function NumberGenerator(count) {
     const numbers = [];
     for (let i = 0; i < count; i++) {
         const randomNumber = Math.random();
-        if (randomNumber < 0.5) {
+        if (randomNumber < 0.75) {
             const numberInRange1 = Math.floor(Math.random() * 1010) + 1;
             numbers.push(numberInRange1);
         } else {

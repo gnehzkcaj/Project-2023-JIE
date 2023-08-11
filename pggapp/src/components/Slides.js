@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Typography, Chip } from "@mui/material";
 import { Box } from '@mui/system';
+import { TYPE_COLORS } from './Typecolors';
 import './Slides.css';
 
 export default function Slides({ images }) {
@@ -75,6 +76,9 @@ export default function Slides({ images }) {
 
   const currentImage = images[currentIndex];
   console.log(currentImage);
+
+  const types = currentImage.type.split(' / '); 
+  
   return (
     <div className="carousel">
       <Box marginBottom={2} sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
@@ -87,7 +91,17 @@ export default function Slides({ images }) {
         <Box>
         <Typography variant="body2" color="Secondary">
             <span>Type:</span>
-            <Chip label={currentImage.type} size="small" />
+            {types.map((type, index) => (
+                    <Chip
+                        key={index}
+                        label={type}
+                        size="small"
+                        style={{
+                            backgroundColor: `#${TYPE_COLORS[type.toLowerCase()]}`,
+                            marginRight: '5px',
+                        }}
+                    />
+                ))}
             <span style={{ marginLeft: 100 }}>Abilities:</span>
             <Chip label={currentImage.abilities} size="small" />
           </Typography>
@@ -95,6 +109,7 @@ export default function Slides({ images }) {
       </Box>
 
       <div className="carousel-images">
+
         <AnimatePresence>
           <motion.img
             key={currentImage.id}
