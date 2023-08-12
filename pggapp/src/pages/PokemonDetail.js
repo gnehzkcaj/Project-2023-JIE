@@ -1,33 +1,19 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from "react";
 import Container from '@mui/material/Container';
-import Linkbutton from '../components/Linkbutton';
-import { Grid, Button, Typography } from '@mui/material';
-import { Box } from '@mui/system';
-import { TYPE_COLORS } from '../components/Typecolors';
+import { Grid, Button, LinearProgress, Typography, Box } from '@mui/material';
+import Description from '../components/Description'
+
+import { TYPE_COLORS } from '../components/Colors';
+import Tvfooter from '../components/Tvfooter';
 
 export default function PokemonDetail() {
     const [pokeDetail, setpokeDetail] = useState({});
     console.log("this is pokeDetail:", pokeDetail);
     const [prePokemon, setPrePokemon] = useState([]);
     const [nextPokemon, setNextPokemon] = useState([]);
-    const [pokeDescription, setpokeDescription] = useState([])
 
     const params = useParams();
-
-    useEffect(() => {
-        const getPggDescription = () => {
-            fetch(`https://pokeapi.co/api/v2/pokemon-species/${params.id}
-            `)
-                .then(response => response.json())
-                .then(data => {
-                    console.log("this is data:", data);
-                    setpokeDescription(data);
-                })
-                .catch(error => console.log(error));
-        }
-        getPggDescription();
-    }, [params.id]);
 
     useEffect(() => {
         const getPggData = () => {
@@ -75,43 +61,50 @@ export default function PokemonDetail() {
     const prePokemonName = prePokemon.name;
 
     const handlePrePokemon = () => {
-        window.location.href = `/pokemon/${preID}`;
-    }
+        if (preID >= 1) {
+            window.location.href = `/pokemon/${preID}`;
+        }
+    };
 
     const nextPokemonName = nextPokemon.name;
 
     const handleNextPokemon = () => {
-        window.location.href = `/pokemon/${nextID}`;
+        if (nextID <= 10271) {
+            window.location.href = `/pokemon/${nextID}`;
+        }
     }
+
+    const height = parseInt(pokeDetail.height) / 10;
+    const weight = parseInt(pokeDetail.weight) / 10;
 
     return (
         <div>
             <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Box marginTop={10} sx={{ display: 'flex', justifyContent: 'space-between', width: 500 }}>
-                    <Button variant="contained" onClick={handlePrePokemon} sx={{ backgroundColor: '#a4a4a4' }}>
+                    <Button variant="contained" onClick={handlePrePokemon} sx={{ width: 300, height: 70, backgroundColor: '#a4a4a4' }}>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            Previous
-                            #{preID}
+                            <p>Previous</p>
+                            {preID >= 1 ? `#${preID}` : ' Not available'}
                             {prePokemonName ? '\n' + prePokemonName : ''}
                         </div>
                     </Button>
                     <Box sx={{ width: 200 }}></Box>
-                    <Button variant="contained" onClick={handleNextPokemon} sx={{ backgroundColor: '#a4a4a4' }}>
+                    <Button variant="contained" onClick={handleNextPokemon} sx={{ width: 300, height: 70, backgroundColor: '#a4a4a4' }}>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                            Next
-                            #{nextID}
+                            <p>Next</p>
+                            {nextID <= 10271 ? `#${nextID}` : ' Not available'}
                             {nextPokemonName ? '\n' + nextPokemonName : ''}
                         </div>
                     </Button>
                 </Box>
             </Container>
+
             {pokeDetail.name && pokeDetail.name.length > 0 && (
-                <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <div style={{ marginTop: 20, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                     <h2>{pokeDetail.name}</h2>
                     <h3 style={{ marginLeft: '20px' }}>#{pokeDetail.id}</h3>
                 </div>
             )}
-
 
             <Grid container spacing={2}>
                 <Grid item xs={3}>
@@ -119,41 +112,39 @@ export default function PokemonDetail() {
                         {pokeDetail.id < 650 ? (
                             <img
                                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeDetail.id}.svg`}
-                                alt={`Pokemon with ID ${pokeDetail.id}`}
+                                alt={`Not Available`}
+                                width={200}
                             />
                         ) : (
                             <img
                                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeDetail.id}.png`}
-                                alt={`Pokemon with ID ${pokeDetail.id} img not avaiable`}
+                                alt={`Not Available`}
+                                width={200}
                             />
                         )}
                     </Box>
                 </Grid>
                 <Grid item xs={3}>
-                    <Box>
-
-                        <h3>height: {pokeDetail.height}</h3>
-                        <h3>weight: {pokeDetail.weight}</h3>
+                    <Box sx={{ backgroundColor: '#30a7d7', borderRadius: 3, color: 'white', padding: '3vh', flexDirection: "column", textAlign: "center", justifyContent: 'center', alignItems: 'center' }}>
+                        <h3>height: {height} m</h3>
+                        <h3>weight: {weight} kg</h3>
                         <h3>base_experience: {pokeDetail.base_experience}</h3>
                         <img
-                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/shiny/${pokeDetail.id}.png`}
-                            alt={'page not found'}
-                            width={200}
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/${pokeDetail.id}.png`}
+                            alt={`Not Available`}
+                            width={100}
                         />
+                        <h3>Ability:</h3>
+
+                        {pokeDetail && pokeDetail.abilities && pokeDetail.abilities.map((abilityData, index) => (
+                            <Box key={index} style={{ color: 'black' }}>
+                                <h3>{abilityData.ability.name}</h3>
+                            </Box>
+                        ))}
                     </Box>
                 </Grid>
                 <Grid item xs={3}>
-                    <div>
-                        <h3>Ability:</h3>
-                        <ol>
-                            {pokeDetail && pokeDetail.abilities && pokeDetail.abilities.map((abilityData, index) => (
-                                <li key={index}>
-                                    {abilityData.ability.name}
-                                </li>
-                            ))}
-                        </ol>
-                    </div>
-                    <div>
+                    <Box marginLeft={5}>
                         <h3>Types:</h3>
                         <ul>
                             {pokeDetail &&
@@ -167,61 +158,40 @@ export default function PokemonDetail() {
                                     </Button>
                                 ))}
                         </ul>
-                    </div>
-                    <img
-                        src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/${pokeDetail.id}.png`}
-                        alt={'page not found'}
-                        width={100}
-                    />
-
+                        <img
+                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/${pokeDetail.id}.png`}
+                            alt={`Not Available`}
+                            width={100}
+                        />
+                    </Box>
                 </Grid>
                 <Grid item xs={3}>
                     <h3>Stats:</h3>
-
+                    <div>
+                        {pokeDetail &&
+                            pokeDetail.stats && pokeDetail.stats.map((statData, index) => (
+                                <div>
+                                    <Typography variant='body1'>
+                                        {statData.stat.name}
+                                    </Typography>
+                                    <Typography variant='body1'>{statData.base_stat}/100</Typography>
+                                    <div>
+                                        <LinearProgress
+                                            variant="determinate"
+                                            marginLeft={5}
+                                            value={statData.base_stat}
+                                            sx={{ width: 120, backgroundColor: '#a4a4a4', borderRadius: 5, flex: 1, height: 10, marginBottom: 5 }}
+                                        />
+                                    </div>
+                                </div>
+                            ))}
+                    </div>
                 </Grid>
             </Grid>
-            <Box marginBottom={5}>
-                <h3>Flavor Facts:</h3>
-                {pokeDescription && pokeDescription.flavor_text_entries && (
-                    <ul>
-                        {Array.from(
-                            pokeDescription.flavor_text_entries.reduce((uniqueFlavorTexts, flavor_text_entry) => {
-                                if (flavor_text_entry.language.name === 'en') {
-                                    const cleanFlavorText = flavor_text_entry.flavor_text.replace(/[\f]/g, ' ');
-                                    uniqueFlavorTexts.add(cleanFlavorText);
-                                }
-                                return uniqueFlavorTexts;
-                            }, new Set())
-                        ).map((uniqueFlavorText, index) => (
-                            <li key={index}>
-                                {uniqueFlavorText}
-                            </li>
-                        ))}
-                    </ul>
-                )}
-
-
+            <Box marginBottom={5} marginLeft={5}>
+                <Description id={pokeDetail.id} />
             </Box>
-
-
-            <Box style={{ marginRight: 60, display: 'flex', justifyContent: 'flex-end' }}>
-                <Linkbutton text={'Expore More Pokémon'} url={'../../gallery'} />
-            </Box>
-            <Box sx={{
-                backgroundColor: '#232323',
-                textAlign: 'center',
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginBottom: 2
-            }}>
-                <Typography color="white" variant="h6" component="h4" marginTop={5} marginBottom={5}>
-                    {pokeDetail.name} Pokémon TV Episodes
-                </Typography>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/AeJaL59Pqk0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <Box marginTop={5}></Box>
-            </Box>
+            <Tvfooter pokeDetailName={pokeDetail.name} />
         </div >
     );
 }

@@ -63,4 +63,8 @@ const itemData = [
     img: 'https://i.imgur.com/aDYNO9I.png',
     title: 'Kongfu Pikachu and Panda',
   },
+  {
+    img: 'https://i.imgur.com/R7LBz0J.png',
+    title: 'Spider Pikachu',
+  },
 ];

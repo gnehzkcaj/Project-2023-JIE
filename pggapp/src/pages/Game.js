@@ -11,7 +11,7 @@ export default function Game() {
                 </Typography>
             </Box>
             <Box sx={{ display: "flex" }}>
-                <Box marginTop={10} marginRight={30}>
+                <Box marginTop={10} marginRight={5}>
                     <Typography variant="h6" component="h4" marginTop={5} marginBottom={3}>
                         Enjoy the lates Pokémon Present
                     </Typography>

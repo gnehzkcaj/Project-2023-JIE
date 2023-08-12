@@ -6,12 +6,13 @@ html {
 h1 {
   text-align: center;
   font-size: 200%;
+  color: #382121
 }
 
 h2 {
   font-size: 200%;
-  color:chocolate;
   text-align: center;
+  color: #382121
 }
 
 button {

@@ -1,3 +1,4 @@
+//set the color scheme of pokemon types
 export const TYPE_COLORS = {
     bug: 'B1C12E',
     dark: '4F3A2D',
@@ -9,7 +10,7 @@ export const TYPE_COLORS = {
     flying: 'A3B3F7',
     ghost: '6060B2',
     grass: '74C236',
-    ground: 'D3B357',
+    ground: 'D3B356',
     ice: 'A3E7FD',
     normal: 'C8C4BC',
     poison: '934594',
@@ -19,6 +20,13 @@ export const TYPE_COLORS = {
     water: '3295F6'
 };
 
-export default function Typecolors() {
-    return TYPE_COLORS;
-}
+//set the color scheme of pokemon stats
+export const getColorForStat = (baseStat) => {
+    if (baseStat >= 80) {
+        return 'green';
+    } else if (baseStat >= 50) {
+        return 'yellow';
+    } else {
+        return 'red';
+    }
+};

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Typography, Chip } from "@mui/material";
 import { Box } from '@mui/system';
-import { TYPE_COLORS } from './Typecolors';
+import { TYPE_COLORS } from "./Colors";
 import './Slides.css';
 
 export default function Slides({ images }) {
@@ -90,7 +90,7 @@ export default function Slides({ images }) {
         </Box>
         <Box>
         <Typography variant="body2" color="Secondary">
-            <span>Type:</span>
+            <span>Type: </span>
             {types.map((type, index) => (
                     <Chip
                         key={index}
