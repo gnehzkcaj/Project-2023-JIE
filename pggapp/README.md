@@ -32,7 +32,7 @@
 - [Contact](#contact)
 
 ## App Screenshot
-###-find more in development_journal folders
+### find more screenshots in development_journal folders
 ![Web capture_13-8-2023_95817_generalassemblyfinalproject vercel app](https://github.com/gnehzkcaj/Project-2023-JIE/assets/97222543/e725fd15-c164-4e06-b5af-d8523252555a)
 
 
@@ -45,9 +45,6 @@
 <img width="2320" alt="General Assembly React Project August 2023 (1)" src="https://github.com/gnehzkcaj/Project-2023-JIE/assets/97222543/71875721-b4dd-4c5f-bffe-12c3b41c89ec">
 
 ## Installation
-
-Provide step-by-step instructions on how to install and set up the project. Include any dependencies that need to be installed and any configuration required.
-
 To run the project locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/gnehzkcaj/Project-2023-JIE.git
