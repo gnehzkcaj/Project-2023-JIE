@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import PokemonList from './PokemonList';
 import NumberGenerator from '../components/Numbergenerator';
@@ -42,7 +41,6 @@ export default function Gallery() {
     const fetchSurprisedData = async () => {
       try {
         setPokemon([]);
-
         const promises = numbers.map(async (num) => {
           const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${num}`);
           const data = await response.json();
@@ -81,3 +79,10 @@ export default function Gallery() {
     </Container>
   );
 }
+
+
+
+
+
+
+

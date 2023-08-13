@@ -81,7 +81,7 @@ export default function PokemonDetail() {
         <div>
             <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 <Box marginTop={10} sx={{ display: 'flex', justifyContent: 'space-between', width: 500 }}>
-                    <Button variant="contained" onClick={handlePrePokemon} sx={{ width: 300, height: 70, backgroundColor: '#a4a4a4' }}>
+                    <Button variant="contained" onClick={handlePrePokemon} sx={{ width: 300, height: 80, backgroundColor: '#a4a4a4' }}>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <p>Previous</p>
                             {preID >= 1 ? `#${preID}` : ' Not available'}
@@ -89,7 +89,7 @@ export default function PokemonDetail() {
                         </div>
                     </Button>
                     <Box sx={{ width: 200 }}></Box>
-                    <Button variant="contained" onClick={handleNextPokemon} sx={{ width: 300, height: 70, backgroundColor: '#a4a4a4' }}>
+                    <Button variant="contained" onClick={handleNextPokemon} sx={{ width: 300, height: 80, backgroundColor: '#a4a4a4' }}>
                         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                             <p>Next</p>
                             {nextID <= 10271 ? `#${nextID}` : ' Not available'}
@@ -113,13 +113,13 @@ export default function PokemonDetail() {
                             <img
                                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeDetail.id}.svg`}
                                 alt={`Not Available`}
-                                width={200}
+                                width={300}
                             />
                         ) : (
                             <img
                                 src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokeDetail.id}.png`}
                                 alt={`Not Available`}
-                                width={200}
+                                width={300}
                             />
                         )}
                     </Box>
@@ -144,9 +144,9 @@ export default function PokemonDetail() {
                     </Box>
                 </Grid>
                 <Grid item xs={3}>
-                    <Box marginLeft={5}>
+                    <Box sx={{ textAlign: 'center' }}>
                         <h3>Types:</h3>
-                        <ul>
+                        <div>
                             {pokeDetail &&
                                 pokeDetail.types &&
                                 pokeDetail.types.map((typesData, index) => (
@@ -157,12 +157,27 @@ export default function PokemonDetail() {
                                         {typesData.type.name}
                                     </Button>
                                 ))}
-                        </ul>
+                        </div>
                         <img
                             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/${pokeDetail.id}.png`}
                             alt={`Not Available`}
                             width={100}
                         />
+                        <h3>Held Items:</h3>
+                        <>
+                            {pokeDetail &&
+                                pokeDetail.held_items &&
+                                pokeDetail.held_items.map((heldItemsData, index) => (
+                                    <div>
+                                        <h3 key={index}>{heldItemsData.item.name}</h3>
+                                        <img
+                                            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/${heldItemsData.item.name}.png`}
+                                            alt={`Not Available`}
+                                            width={60} />
+                                    </div>
+
+                                ))}
+                        </>
                     </Box>
                 </Grid>
                 <Grid item xs={3}>
@@ -174,13 +189,13 @@ export default function PokemonDetail() {
                                     <Typography variant='body1'>
                                         {statData.stat.name}
                                     </Typography>
-                                    <Typography variant='body1'>{statData.base_stat}/100</Typography>
+                                    <Typography variant='body1'>{statData.base_stat}/255</Typography>
                                     <div>
                                         <LinearProgress
                                             variant="determinate"
                                             marginLeft={5}
                                             value={statData.base_stat}
-                                            sx={{ width: 120, backgroundColor: '#a4a4a4', borderRadius: 5, flex: 1, height: 10, marginBottom: 5 }}
+                                            sx={{ width: 255, backgroundColor: '#a4a4a4', borderRadius: 5, flex: 1, height: 10, marginBottom: 5 }}
                                         />
                                     </div>
                                 </div>

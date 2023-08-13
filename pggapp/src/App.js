@@ -7,6 +7,7 @@ import './App.css';
 import SearchAppBar from './components/Appbar';
 import { AppBar, Toolbar, Typography, Button } from '@mui/material';
 import Footer from './components/Footer';
+import ItemList from './pages/ItemList';
 import { grey } from '@mui/material/colors';
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
           <Button component={Link} to="/gallery" color="inherit">
             Pokédex
           </Button>
+          <Button component={Link} to="/items" color="inherit">
+            Items
+          </Button>
           <Button component={Link} to="/pokemon/25" color="inherit">
             Sprite
           </Button>
@@ -36,7 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      <SearchAppBar />
+      <SearchAppBar /> 
       <NavBar marginTop={20} />
       <Routes>
         <Route path="/" element={<Homepage />} />
@@ -45,11 +49,12 @@ function App() {
           <PokemonDetail />
         </>} />
         <Route path="/game" element={<Game />} />
-     
+        <Route path="/items" element={<ItemList />} />
         <Route path="*" element={<h1>4-oh!-4, that page doesn't exist.</h1>} />
       </Routes>
       <Footer />
     </div>
   );
 }
+
 export default App;
