@@ -2,11 +2,15 @@
 
 # Project Name: General Assembly Front End Web Development Course RCTR05A-2023 August Final Project-Jie Zheng
 
+[LIVE DEMO] (https://generalassemblyfinalproject.vercel.app/)
+[BACKUP] (http://generalassemblyfinalproject.surge.sh/)
+
 [![License](https://img.shields.io/badge/license-MPL%202.0-orange.svg)](https://opensource.org/licenses/MPL-2.0)
 
 ## Description
 - This project is my Final Project for the General Assembly React Course.
 - This project is a web application built with React and Material UI that provides a seamless and dynamic user experience through client-side routing using React Router. This project aims to demonstrate how to implement navigation and routing functionalities in a single-page application, making it easy to create multi-page-like experiences without full page reloads.
+- Some Images are created by Generate AI.
 
 ### Project Requirement
 - This is an open-ended project. We can't provide any set solution, but we're always here to help. You'll be making your own React app. This can be a website you imagine, but feel free to pick an existing website and try to mimic it.
@@ -19,7 +23,7 @@
 - A mimic website of www.pokemon.com using [pokeapi](pokeapi.co)
 
 ## Table of Contents
-
+- [App Screenshot](#app-screenshot)
 - [Development Journal](#development-journal)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -27,12 +31,17 @@
 - [License](#license)
 - [Contact](#contact)
 
+## App Screenshot
+![Web capture_13-8-2023_95817_generalassemblyfinalproject vercel app](https://github.com/gnehzkcaj/Project-2023-JIE/assets/97222543/e725fd15-c164-4e06-b5af-d8523252555a)
+
+
 ## Development Journal
 
 -week 01
 <img width="2002" alt="General Assembly React Course Final Project-Website Wireframe" src="https://github.com/gnehzkcaj/Project-2023-JIE/assets/97222543/019fd947-e99e-4015-b44e-aee5fa5b1ba1">
 
-add a pagination component
+-week 02
+<img width="2320" alt="General Assembly React Project August 2023 (1)" src="https://github.com/gnehzkcaj/Project-2023-JIE/assets/97222543/71875721-b4dd-4c5f-bffe-12c3b41c89ec">
 
 ## Installation
 
