@@ -1,6 +1,8 @@
 
 
-# Project Name: General Assembly Front End Web Development Course RCTR05A-2023 August Final Project-Jie Zheng
+# Project 1  Name: General Assembly Front End Web Development Course RCTR05A-2023 August Final Project-Jie Zheng
+
+[LIVE DEMO](https://generalassemblyfinalproject.vercel.app/)
 
 [![License](https://img.shields.io/badge/license-MPL%202.0-orange.svg)](https://opensource.org/licenses/MPL-2.0)
 
@@ -16,7 +18,7 @@
 - A list of some more APIs for inspiration: https://github.com/public-apis/public-apis
 
 ### My solution
-- A mimic website of 
+- A mimic website of www.pokemon.com/uk by using [Pokeapi](https://pokeapi.co/)
 
 ## Table of Contents
 
@@ -39,15 +41,8 @@ To run the project locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/gnehzkcaj/Project-2023-JIE.git
 2. Navigate to the project directory: `cd pggapp`
-3.
-```
-npm install react-router-dom
-npm i @mui/material @emotion/react @emotion/styled
-
-
-```
-4. Install dependencies: `npm install`
-5. Start the development server: `npm start`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start`
 
 ## Usage
 
