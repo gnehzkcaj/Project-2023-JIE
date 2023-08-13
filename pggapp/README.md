@@ -1,5 +1,4 @@
 
-
 # Project Name: General Assembly Front End Web Development Course RCTR05A-2023 August Final Project-Jie Zheng
 
 [LIVE DEMO] (https://generalassemblyfinalproject.vercel.app/)
@@ -32,6 +31,7 @@
 - [Contact](#contact)
 
 ## App Screenshot
+###-find more in development_journal folders
 ![Web capture_13-8-2023_95817_generalassemblyfinalproject vercel app](https://github.com/gnehzkcaj/Project-2023-JIE/assets/97222543/e725fd15-c164-4e06-b5af-d8523252555a)
 
 
@@ -81,6 +81,5 @@ This project is licensed under the [Mozilla Public License 2.0](LICENSE.txt). Yo
 
 ---
 
-**Note**: Feel free to modify and expand this template to suit the specific needs of your project. Make sure to include all relevant information to help users and potential contributors understand and use your project effectively.
 
 
