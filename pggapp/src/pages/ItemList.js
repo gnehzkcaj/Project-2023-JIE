@@ -31,7 +31,6 @@ export default function ItemList() {
                         }
                     })
                 );
-
                 setLoading(false);
                 setItems(items => [...items, ...fetchedItems.filter(item => item !== null)]);
             } catch (error) {

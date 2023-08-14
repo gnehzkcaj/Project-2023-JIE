@@ -101,8 +101,8 @@ export default function PokemonDetail() {
 
             {pokeDetail.name && pokeDetail.name.length > 0 && (
                 <div style={{ marginTop: 20, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <h3 style={{ marginRight: '20px' }}>#{pokeDetail.id}</h3>
                     <h2>{pokeDetail.name}</h2>
-                    <h3 style={{ marginLeft: '20px' }}>#{pokeDetail.id}</h3>
                 </div>
             )}
 

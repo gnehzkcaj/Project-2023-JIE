@@ -1,9 +1,9 @@
 
 # Project Name: General Assembly Front End Web Development Course RCTR05A-2023 August Final Project-Jie Zheng
 
-[[LIVE DEMO]](https://generalassemblyfinalproject.vercel.app/)
+[LIVE DEMO](https://generalassemblyfinalproject.vercel.app/)
 
-[[BACKUP]](http://generalassemblyfinalproject.surge.sh/)
+[BACKUP](http://generalassemblyfinalproject.surge.sh/)
 
 [![License](https://img.shields.io/badge/license-MPL%202.0-orange.svg)](https://opensource.org/licenses/MPL-2.0)
 
@@ -59,7 +59,18 @@ Once the development server is running, open your web browser and go to `http://
 Feel free to explore the different features implemented in the application, such as nested routes, route parameters, and the 404 page.
 
 ## Features
+- **Homepage:** Utilize Material UI Library Image List Layout and Framer Motion React Library.
+- **Search Bar and Nav Bar:** Enrich each webpage with both Navigation and Search feature. Users can effortlessly explore Pokémon details by searching either their ID or Name. The system will convert the search input to lowercase, ensuring a smooth searching experience.
+- **Pokédex:** On the Pokédex page, you'll discover a list of over 1,281 Pokémon organized into easily navigable sections. Each page is displaying a collection of 12 Pokémon for optimal user experience. You have the flexibility to arrange the Pokémon order according to your preference: ascend or descend by ID, and alphabetically.
 
+Moreover, for a dash of excitement, I've added a "Surprise Me" button that provides a unique twist. With each press, you'll be greeted with a selection of 12 Pokémon chosen at random, offering an element of unpredictability to your gallery experience. You can press "Fetch All" button to undo the "Surprise Me" twist.
+
+By clicking "View Detail" button, it will bring you to the Sprite Page to view that Pokémon detail.
+- **Items page:** With ability to dispay 2,050 Pokémon Items by its ID, Name and Images. It has a "Load More" button for adding display items.
+- **Sprite page:** Display Pokémon Detail with height, weight, base_experience, abilities, types, held items, statistics and species Flavor Facts. There is also a TV footer for YouTube video.
+- **Games & Apps page:** Display a YouTube Video crafted using Lightworks and Veeware Audio Editor. It also brings you to another Game App.  
+
+## React Functions
 - **Client-Side Routing:** Utilizes React Router to manage client-side routing, enabling smooth navigation between different views without refreshing the entire page.
 - **Multiple Routes:** Configured with multiple routes, each associated with a unique URL, allowing users to access specific content through URLs directly.
 - **Nested Routes:** Implements nested routes to create a hierarchical structure for components, offering flexibility and organization in building complex UI layouts.

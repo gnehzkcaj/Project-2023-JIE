@@ -36,6 +36,7 @@ export default function Gallery() {
     }
   }, [isButtonClicked]);
 
+  console.log("pokemonlength", pokemon.length)
   useEffect(() => {
     setLoading(true);
     const fetchSurprisedData = async () => {
