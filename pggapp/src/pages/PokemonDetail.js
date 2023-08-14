@@ -190,14 +190,12 @@ export default function PokemonDetail() {
                                         {statData.stat.name}
                                     </Typography>
                                     <Typography variant='body1'>{statData.base_stat}/255</Typography>
-                                    <div>
-                                        <LinearProgress
-                                            variant="determinate"
-                                            marginLeft={5}
-                                            value={statData.base_stat}
-                                            sx={{ width: 255, backgroundColor: '#a4a4a4', borderRadius: 5, flex: 1, height: 10, marginBottom: 5 }}
-                                        />
-                                    </div>
+                                    <LinearProgress
+                                        variant="determinate"
+                                        value={(statData.base_stat / 255) * 100} // Convert to integer
+                                        sx={{ width: 255, backgroundColor: '#a4a4a4', borderRadius: 5, flex: 1, height: 10, marginBottom: 5, marginLeft: 5 }}
+                                    />
+
                                 </div>
                             ))}
                     </div>
