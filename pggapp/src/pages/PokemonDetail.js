@@ -150,12 +150,12 @@ export default function PokemonDetail() {
                             {pokeDetail &&
                                 pokeDetail.types &&
                                 pokeDetail.types.map((typesData, index) => (
-                                    <Button
+                                    <button
                                         key={index}
                                         style={{ color: 'white', backgroundColor: `#${TYPE_COLORS[typesData.type.name]}`, margin: '5px' }}
                                     >
                                         {typesData.type.name}
-                                    </Button>
+                                    </button>
                                 ))}
                         </div>
                         <img
