@@ -195,7 +195,6 @@ export default function PokemonDetail() {
                                         value={(statData.base_stat / 255) * 100} // Convert to integer
                                         sx={{ width: 255, backgroundColor: '#a4a4a4', borderRadius: 5, flex: 1, height: 10, marginBottom: 5, marginLeft: 5 }}
                                     />
-
                                 </div>
                             ))}
                     </div>
