@@ -196,7 +196,7 @@ export default function PokemonDetail() {
                                         sx={{ backgroundColor: '#101820FF',
                                         '& .MuiLinearProgress-bar': {
                                           backgroundColor: '#FEE715FF'
-                                        }, width: 255, borderRadius: 5, flex: 1, height: 10, marginBottom: 5, marginLeft: 5 }}
+                                        }, width: 255, borderRadius: 5, flex: 1, height: 12, marginBottom: 5, marginLeft: 5 }}
                                     />
                                 </div>
                             ))}
