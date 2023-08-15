@@ -193,7 +193,10 @@ export default function PokemonDetail() {
                                     <LinearProgress
                                         variant="determinate"
                                         value={(statData.base_stat / 255) * 100} 
-                                        sx={{ width: 255, backgroundColor: '#a4a4a4', borderRadius: 5, flex: 1, height: 10, marginBottom: 5, marginLeft: 5 }}
+                                        sx={{ backgroundColor: '#101820FF',
+                                        '& .MuiLinearProgress-bar': {
+                                          backgroundColor: '#FEE715FF'
+                                        }, width: 255, borderRadius: 5, flex: 1, height: 10, marginBottom: 5, marginLeft: 5 }}
                                     />
                                 </div>
                             ))}
