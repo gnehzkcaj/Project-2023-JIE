@@ -59,7 +59,7 @@ export default function ItemList() {
                 {items.map((item, index) => (
                     <Grid item key={index} xs={6} sm={4} md={3} lg={2}>
                         <Card variant="outlined" sx={{ display: 'flex', justifyContent: 'center' }}>
-                            <Typography variant="body1" marginRight={3}>{index}</Typography>
+                            <Typography variant="body1" marginRight={3}>{index+1}</Typography>
                             <Typography variant="body1" marginRight={2}>{item.name}</Typography>
                             <img src={item.spriteUrl} alt={item.name} />
                         </Card>
