@@ -22,11 +22,13 @@ export const TYPE_COLORS = {
 
 //set the color scheme of pokemon stats
 export const getColorForStat = (baseStat) => {
-    if (baseStat >= 80) {
-        return 'green';
+    if (baseStat >= 150) {
+        return '#5ad45a';
+    } else if (baseStat >= 100) {
+        return '#1a53ff';
     } else if (baseStat >= 50) {
-        return 'yellow';
+        return '#ffee65';
     } else {
-        return 'red';
+        return '#b30000';
     }
 };

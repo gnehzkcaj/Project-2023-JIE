@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import { Grid, Button, LinearProgress, Typography, Box } from '@mui/material';
 import Description from '../components/Description'
 
-import { TYPE_COLORS } from '../components/Colors';
+import { TYPE_COLORS, getColorForStat } from '../components/Colors';
 import Tvfooter from '../components/Tvfooter';
 
 export default function PokemonDetail() {
@@ -191,13 +191,21 @@ export default function PokemonDetail() {
                                     </Typography>
                                     <Typography variant='body1'>{statData.base_stat}/255</Typography>
                                     <LinearProgress
-                                        variant="determinate"
-                                        value={(statData.base_stat / 255) * 100} 
-                                        sx={{ backgroundColor: '#101820FF',
-                                        '& .MuiLinearProgress-bar': {
-                                          backgroundColor: '#FEE715FF'
-                                        }, width: 255, borderRadius: 5, flex: 1, height: 12, marginBottom: 5, marginLeft: 5 }}
-                                    />
+                                            variant="determinate"
+                                            value={(statData.base_stat / 255) * 100}
+                                            sx={{
+                                                backgroundColor: '#d7e1ee',
+                                                '& .MuiLinearProgress-bar': {
+                                                    backgroundColor: `${getColorForStat(statData.base_stat)}`
+                                                },
+                                                width: 255,
+                                                borderRadius: 5,
+                                                flex: 1,
+                                                height: 12,
+                                                marginBottom: 5,
+                                                marginLeft: 5
+                                            }}
+                                        />
                                 </div>
                             ))}
                     </div>

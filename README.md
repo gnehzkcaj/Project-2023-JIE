@@ -1,9 +1,9 @@
 
 # Project Name: General Assembly Front End Web Development Course RCTR05A-2023 August Final Project-Jie Zheng
 
-[LIVE DEMO](https://generalassemblyfinalproject.vercel.app/)
+[LIVE DEMO](https://generalassemblyfinalproject.vercel.app/)-this version allow special characters input
 
-[BACKUP](http://generalassemblyfinalproject.surge.sh/)
+[BACKUP](http://generalassemblyfinalproject.surge.sh/)-this version limit user input and has security feature
 
 [![License](https://img.shields.io/badge/license-MPL%202.0-orange.svg)](https://opensource.org/licenses/MPL-2.0)
 
@@ -71,11 +71,7 @@ By clicking "View Detail" button, it will bring you to the Sprite Page to view t
 
 This project is licensed under the [Mozilla Public License 2.0](LICENSE.txt). You can find the full text of the license in the LICENSE.txt file.
 
-## Contact
-
-
-
 ## Youtube Demo:
-
+https://youtu.be/S2m7-39QBp0
 
 ---
