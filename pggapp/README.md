@@ -1,9 +1,9 @@
 
 # Project Name: General Assembly Front End Web Development Course RCTR05A-2023 August Final Project-Jie Zheng
 
-[LIVE DEMO](https://generalassemblyfinalproject.vercel.app/)-this version allow special characters input
+[LIVE DEMO](https://generalassemblyfinalproject.vercel.app/)
 
-[BACKUP](http://generalassemblyfinalproject.surge.sh/)-this version limit user input and has security feature
+[BACKUP](http://generalassemblyfinalproject.surge.sh/)
 
 [![License](https://img.shields.io/badge/license-MPL%202.0-orange.svg)](https://opensource.org/licenses/MPL-2.0)
 
