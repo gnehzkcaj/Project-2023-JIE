@@ -28,8 +28,9 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
+- [React Functions](#react-functions)
 - [License](#license)
-- [Contact](#contact)
+- [Youtube](#youtube-demo)
 
 ## App Screenshot
 ### find more screenshots in development_journal folders
@@ -83,6 +84,12 @@ This project is licensed under the [Mozilla Public License 2.0](LICENSE.txt). Yo
 
 ## Youtube Demo:
 https://youtu.be/S2m7-39QBp0
+
+## Deploy on render
+[Deploy on render](https://medium.com/devjavu/auto-deploy-react-apps-with-render-4fa393380998)
+
+## Dockerize the app
+[Dockerize the app](https://dev.to/ayesh_nipun/how-to-dockerize-a-react-application-kpa)
 ---
 
 

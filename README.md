@@ -8,9 +8,19 @@
 [![License](https://img.shields.io/badge/license-MPL%202.0-orange.svg)](https://opensource.org/licenses/MPL-2.0)
 
 ## Description
-- This project is my Final Project for the General Assembly React Course. A mimic website of www.pokemon.com using [pokeapi](pokeapi.co)
+- This project is my Final Project for the General Assembly React Course.
 - This project is a web application built with React and Material UI that provides a seamless and dynamic user experience through client-side routing using React Router. This project aims to demonstrate how to implement navigation and routing functionalities in a single-page application, making it easy to create multi-page-like experiences without full page reloads.
 - Some Images are created by Generate AI.
+
+### Project Requirement
+- This is an open-ended project. We can't provide any set solution, but we're always here to help. You'll be making your own React app. This can be a website you imagine, but feel free to pick an existing website and try to mimic it.
+- Your app must utilize nested components and state.
+- Your app must use React Router and have multiple in-app pages.
+- Your app must make use of an API - either a public API or one you build yourself
+- A list of some more APIs for inspiration: https://github.com/public-apis/public-apis
+
+### My Solution
+- A mimic website of www.pokemon.com using [pokeapi](pokeapi.co)
 
 ## Table of Contents
 - [App Screenshot](#app-screenshot)
@@ -18,8 +28,9 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
+- [React Functions](#react-functions)
 - [License](#license)
-- [Contact](#contact)
+- [Youtube](#youtube-demo)
 
 ## App Screenshot
 ### find more screenshots in development_journal folders
@@ -74,4 +85,8 @@ This project is licensed under the [Mozilla Public License 2.0](LICENSE.txt). Yo
 ## Youtube Demo:
 https://youtu.be/S2m7-39QBp0
 
----
+## Deploy on render
+[Deploy on render](https://medium.com/devjavu/auto-deploy-react-apps-with-render-4fa393380998)
+
+## Dockerize the app
+[Dockerize the app](https://dev.to/ayesh_nipun/how-to-dockerize-a-react-application-kpa)
